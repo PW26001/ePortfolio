@@ -56,11 +56,7 @@
 									</p>
 
 									<p>
-										The BankAccount class used a lock around deposit, withdraw and get_balance so that account values could not be modified by multiple threads at the same time. The wider system included a TransactionSimulator to simulate concurrent users, and a TransactionManager to coordinate transfers between accounts.
-									</p>
-
-									<p>
-										Deadlock prevention became an important part of the design once transfers between accounts were introduced. The TransactionManager acquired locks in account number order, preventing circular waits and allowing transfers to complete safely. The report also demonstrated that total funds were conserved during transfer testing, even when some transfers were denied because of insufficient funds.
+										The BankAccount class used a lock around deposit, withdraw and get_balance so that account values could not be modified by multiple threads at the same time, and a TransactionManager was included to coordinate transfers between accounts. Deadlock prevention then became an important part of the design once transfers between accounts were introduced. The TransactionManager acquired locks in account number order, preventing circular waits and allowing transfers to complete safely. 
 									</p>
 
 									<p>
@@ -68,11 +64,7 @@
 									</p>
 
 									<p>
-										This assessment received 66%, a Merit. The feedback recognised the strength of the object-oriented design, thread-safety mechanisms, deterministic testing and validation approach. It also identified improvements I could make in future, including clearer references, more explanation of lock ordering, scalability analysis, diagrams and a README file.
-									</p>
-
-									<p>
-										This unit was useful because it showed that object-oriented design is not only about clean structure. In concurrent systems, design decisions directly affect correctness, reliability and safety.
+										These commands were included in the appendix of the report. The feedback also suggested that a README would improve usability for external reviewers, so I have included one here as an additional artefact.
 									</p>
 
 									<hr />
@@ -83,10 +75,13 @@
 
 									<ul>
 										<li>
-											<a href="BankingApp.py">BankingApp.py</a> - thread-safe banking system including account operations, transaction simulation, transfer management, deadlock prevention and unit tests.
+											<a href="BankingApp.py">BankingApp.py</a> - thread-safe banking system.
 										</li>
 										<li>
-											<a href="Individual Coding Exercise.docx">Individual Coding Exercise.docx</a> - submitted Unit 6 assessment report, awarded 66% Merit.
+											<a href="Individual Coding Exercise.docx">Individual Coding Exercise.docx</a> - submitted Unit 6 assessment report.
+										</li>
+										<li>
+											<a href="Individual Coding Exercise.docx">README.txt</a> - instructions for running and example outputs.
 										</li>
 									</ul>
 
