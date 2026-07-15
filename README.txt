@@ -1,32 +1,17 @@
-Forty by HTML5 UP
-html5up.net | @ajlkn
-Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+README - Unit 6 Banking System
 
+This README provides instructions for reproducing the test results for the Unit 6 banking system.
 
-This is Forty, my latest and greatest addition to HTML5 UP and, per its incredibly
-creative name, my 40th (woohoo)! It's built around a grid of "image tiles" that are
-set up to smoothly transition to secondary landing pages (for which a separate page
-template is provided), and includes a number of neat effects (check out the menu!),
-extra features, and all the usual stuff you'd expect. Hope you dig it!
+Run unit tests:
+python BankingApp.py
 
-Demo images* courtesy of Unsplash, a radtastic collection of CC0 (public domain) images
-you can use for pretty much whatever.
+Run TransactionSimulator with 50 users performing 100 transactions each:
+python BankingApp.py TransactionSimulator 50 100
 
-(* = not included)
+Run DeadlockTestSimulator with 10 accounts and 3 test loops:
+python BankingApp.py DeadlockTestSimulator 10 3
 
-AJ
-aj@lkn.io | @ajlkn
+Run OverdraftTransferTest with 7 accounts, 1 loop, a starting balance of £100 and a transfer amount of £50:
+python BankingApp.py OverdraftTransferTest 7 1 100 50
 
-
-Credits:
-
-	Demo Images:
-		Unsplash (unsplash.com)
-
-	Icons:
-		Font Awesome (fontawesome.io)
-
-	Other:
-		jQuery (jquery.com)
-		Scrollex (github.com/ajlkn/jquery.scrollex)
-		Responsive Tools (github.com/ajlkn/responsive-tools)
+The parameters can be modified to vary the number of accounts, loops, transactions or transfer amounts in order to perform additional validation and stress testing.
